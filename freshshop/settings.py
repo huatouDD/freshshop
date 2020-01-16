@@ -137,3 +137,6 @@ STATIC_URL = '/static/'
 
 # 重载系统的用户，让UserProfile生效 (默认为User)
 AUTH_USER_MODEL = 'users.UserProfile'
+
+# 设置media(图片)保存路径
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

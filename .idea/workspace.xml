@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="deb90ff0-0f04-4a94-a1b3-13f51b2e419b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/freshshop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/freshshop/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,11 +45,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/freshshop/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="47">
-              <caret line="50" column="14" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
+            <state relative-caret-position="316">
+              <caret line="141" selection-start-line="141" selection-end-line="141" />
             </state>
           </provider>
         </entry>
@@ -114,10 +112,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/users/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="47">
+            <state relative-caret-position="287">
               <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -172,8 +170,8 @@
         <option value="$PROJECT_DIR$/apps/trade/admin.py" />
         <option value="$PROJECT_DIR$/apps/user_operation/admin.py" />
         <option value="$PROJECT_DIR$/freshshop/urls.py" />
-        <option value="$PROJECT_DIR$/freshshop/settings.py" />
         <option value="$PROJECT_DIR$/apps/users/models.py" />
+        <option value="$PROJECT_DIR$/freshshop/settings.py" />
       </list>
     </option>
   </component>
@@ -184,7 +182,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="335" />
     <option name="y" value="75" />
     <option name="width" value="1329" />
@@ -203,22 +201,6 @@
           <expand>
             <path>
               <item name="freshshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="freshshop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="freshshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="freshshop" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="freshshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="freshshop" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="freshshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="freshshop" type="462c0819:PsiDirectoryNode" />
               <item name="freshshop" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -328,15 +310,16 @@
       <updated>1579137126718</updated>
       <workItem from="1579137128913" duration="15167000" />
       <workItem from="1579166285654" duration="44000" />
-      <workItem from="1579166345720" duration="5576000" />
+      <workItem from="1579166345720" duration="5821000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20787000" />
+    <option name="totallyTimeSpent" value="21032000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="335" y="75" width="1329" height="926" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21813917" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -344,7 +327,7 @@
       <window_info anchor="bottom" id="Database Console" weight="0.32992327" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946523" visible="true" weight="0.7455243" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946523" weight="0.7455243" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -353,7 +336,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32951945" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5005348" side_tool="true" weight="0.56064075" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.47314578" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.47314578" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32951945" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -468,28 +451,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://f55b2e8f-770e-4d6b-8c6d-e099e0cbb3ad/schema/freshshop/table/users_userprofile_user_permissions">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://f55b2e8f-770e-4d6b-8c6d-e099e0cbb3ad/schema/freshshop/table/users_verifycode">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true">
             <filter text="" />
           </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/freshshop/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="50" column="14" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -502,11 +469,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/users/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
+        <state relative-caret-position="287">
           <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://f55b2e8f-770e-4d6b-8c6d-e099e0cbb3ad/schema/freshshop/table/users_userprofile_user_permissions">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freshshop/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="141" selection-start-line="141" selection-end-line="141" />
         </state>
       </provider>
     </entry>
