@@ -41,11 +41,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.users',
-    'apps.trade',
-    'apps.user_operation',
-    'apps.goods',
-    'rest_framework'
+    'django.contrib.admin',
+    'users',
+    'trade',
+    'user_operation',
+    'goods',
+    'rest_framework',
+    'xadmin'
 
 ]
 
