@@ -96,6 +96,7 @@ class AdminSite(object):
         from xadmin.views.base import BaseAdminView
         if isinstance(model_or_iterable, ModelBase) or issubclass(model_or_iterable, BaseAdminView):
             model_or_iterable = [model_or_iterable]
+            # print(model_or_iterable, type(model_or_iterable))
         for model in model_or_iterable:
             if isinstance(model, ModelBase):
                 if model._meta.abstract:
