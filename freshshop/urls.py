@@ -16,14 +16,17 @@ Including another URLconf
 # from django.contrib import admin
 from django.urls import path, include
 from django.views.static import serve
+from rest_framework.documentation import include_docs_urls
 
 import xadmin
 from freshshop.settings import MEDIA_ROOT
-from goods.views_base import GoodsListView
+from goods.views import GoodsListView
 
 urlpatterns = [
     path('xadmin/', xadmin.site.urls),
     path('ueditor/', include('DjangoUeditor.urls')),
     path('media/<path:path>', serve, {'document_root': MEDIA_ROOT}),
-    path('goods/', GoodsListView.as_view(), name='goods-list')
+    path('goods/', GoodsListView.as_view(), name='goods-list'),
+    path('docs', include_docs_urls(title='钢仔')),
+    path('api-auth', include('rest_framework.urls'))
 ]
