@@ -143,3 +143,12 @@ AUTH_USER_MODEL = 'users.UserProfile'
 MEDIA_URL = "/media/"
 # 设置media(图片)保存路径
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+# 设置rest_framework分页
+# REST_FRAMEWORK = {
+#     # 分页
+#     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+#     # 每页展示数量
+#     'PAGE_SIZE': 10
+# }
