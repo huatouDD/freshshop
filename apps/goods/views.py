@@ -1,13 +1,14 @@
 from django.shortcuts import render
 
 # Create your views here.
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from goods.models import Goods
 from goods.serializers import GoodsSerializer
-from rest_framework import generics
+from rest_framework import generics, mixins, viewsets
 
 
 # class GoodsListView(APIView):
@@ -32,7 +33,20 @@ class GoodsPagination(PageNumberPagination):
     max_page_size = 100
 
 
-class GoodsListView(generics.ListAPIView):
+# class GoodsListView(generics.ListAPIView):
+#     pagination_class = GoodsPagination
+#     serializer_class = GoodsSerializer
+#     queryset = Goods.objects.all()
+
+class GoodsListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
+    """
+    商品列表页
+    """
+    # 必须带排序，不然报错
+    queryset = Goods.objects.all().order_by('id')
+    # 分页
     pagination_class = GoodsPagination
     serializer_class = GoodsSerializer
-    queryset = Goods.objects.all()
+    filter_backends = (DjangoFilterBackend,)
+
+
