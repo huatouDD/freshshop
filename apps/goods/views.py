@@ -34,6 +34,7 @@ class GoodsPagination(PageNumberPagination):
     max_page_size = 100
 
 
+
 # class GoodsListView(generics.ListAPIView):
 #     pagination_class = GoodsPagination
 #     serializer_class = GoodsSerializer
