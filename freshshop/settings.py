@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'xadmin',
     'crispy_forms',
-    'DjangoUeditor'
+    'DjangoUeditor',
+    'django_filters'
 
 ]
 

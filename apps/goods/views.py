@@ -6,9 +6,10 @@ from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
+from goods.filter import GoodsFilter
 from goods.models import Goods
 from goods.serializers import GoodsSerializer
-from rest_framework import generics, mixins, viewsets
+from rest_framework import generics, mixins, viewsets, filters
 
 
 # class GoodsListView(APIView):
@@ -47,6 +48,10 @@ class GoodsListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     # 分页
     pagination_class = GoodsPagination
     serializer_class = GoodsSerializer
-    filter_backends = (DjangoFilterBackend,)
+    filter_backends = (DjangoFilterBackend, filters.SearchFilter,filters.OrderingFilter)
 
+    # 自定义过滤器
+    filter_class = GoodsFilter
 
+    search_fields = ('=name', 'goods_brief')
+    ordering_fields = ('sold_num', 'add_time')
