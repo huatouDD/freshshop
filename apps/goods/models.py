@@ -22,7 +22,7 @@ class GoodsCategory(models.Model):
     category_type = models.IntegerField('类目级别', choices=CATEGORY_TYPE, help_text='类目级别')
     # 自关联的外键连接
     parent_category = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, verbose_name='父类目级别',
-                                        help_text='父目录')
+                                        help_text='父目录', related_name='sub_cat')
     is_tab = models.BooleanField('是否导航', default=False, help_text='是否导航')
     add_time = models.DateTimeField("添加时间", default=now)
 

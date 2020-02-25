@@ -50,11 +50,15 @@ INSTALLED_APPS = [
     'xadmin',
     'crispy_forms',
     'DjangoUeditor',
-    'django_filters'
+    'django_filters',
+    # 解决跨域
+    'coreschema'
 
 ]
 
 MIDDLEWARE = [
+    # CorsMiddleware should be placed as high as possible, especially before any middleware that can generate responses such as Django's CommonMiddleware or Whitenoise's WhiteNoiseMiddleware. If it is not before, it will not be able to add the CORS headers to these responses.
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -145,7 +149,6 @@ MEDIA_URL = "/media/"
 # 设置media(图片)保存路径
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-
 # 设置rest_framework分页
 # REST_FRAMEWORK = {
 #     # 分页
@@ -153,3 +156,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 #     # 每页展示数量
 #     'PAGE_SIZE': 10
 # }
+
+# 解决跨域
+CORS_ORIGIN_ALLOW_ALL = True

@@ -21,12 +21,13 @@ from rest_framework.routers import DefaultRouter
 
 import xadmin
 from freshshop.settings import MEDIA_ROOT
-from goods.views import  GoodsListViewSet
+from goods.views import GoodsListViewSet, CategoryViewSet
 
 router = DefaultRouter()
 
 # 配置goods的url
 router.register(r'goods', GoodsListViewSet)
+router.register(r'categorys', CategoryViewSet, basename='categorys')
 
 urlpatterns = [
     path('xadmin/', xadmin.site.urls),

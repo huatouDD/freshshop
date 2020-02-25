@@ -7,8 +7,8 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from goods.filter import GoodsFilter
-from goods.models import Goods
-from goods.serializers import GoodsSerializer
+from goods.models import Goods, GoodsCategory
+from goods.serializers import GoodsSerializer, CategorySerializer
 from rest_framework import generics, mixins, viewsets, filters
 
 
@@ -34,7 +34,6 @@ class GoodsPagination(PageNumberPagination):
     max_page_size = 100
 
 
-
 # class GoodsListView(generics.ListAPIView):
 #     pagination_class = GoodsPagination
 #     serializer_class = GoodsSerializer
@@ -49,10 +48,18 @@ class GoodsListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     # 分页
     pagination_class = GoodsPagination
     serializer_class = GoodsSerializer
-    filter_backends = (DjangoFilterBackend, filters.SearchFilter,filters.OrderingFilter)
+    filter_backends = (DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter)
 
     # 自定义过滤器
     filter_class = GoodsFilter
 
     search_fields = ('=name', 'goods_brief')
     ordering_fields = ('sold_num', 'add_time')
+
+
+class CategoryViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
+    """
+    分类列表
+    """
+    serializer_class = CategorySerializer
+    queryset = GoodsCategory.objects.filter(category_type=1)
