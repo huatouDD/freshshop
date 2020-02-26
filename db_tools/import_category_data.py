@@ -40,8 +40,8 @@ for lev1_cat in row_data:
         # 三级类
         for lev3_cat in lev2_cat['sub_categorys']:
             lev3_instance = GoodsCategory()
-            lev3_instance.code = lev2_cat['code']
-            lev3_instance.name = lev2_cat['name']
+            lev3_instance.code = lev3_cat['code']
+            lev3_instance.name = lev3_cat['name']
             lev3_instance.category_type = 3
             lev3_instance.parent_category = lev2_instance
             # save data

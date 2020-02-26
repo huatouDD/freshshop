@@ -52,9 +52,10 @@ class GoodsListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
 
     # 自定义过滤器
     filter_class = GoodsFilter
-
-    search_fields = ('=name', 'goods_brief')
-    ordering_fields = ('sold_num', 'add_time')
+    # 搜索
+    search_fields = ('name', 'goods_brief', 'good_des')
+    # 排序
+    ordering_fields = ('sold_num', 'shop_price')
 
 
 class CategoryViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
