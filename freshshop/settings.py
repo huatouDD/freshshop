@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'user_operation',
     'goods',
     'rest_framework',
+    'rest_framework.authtoken',
     'xadmin',
     'crispy_forms',
     'DjangoUeditor',
@@ -150,12 +151,18 @@ MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # 设置rest_framework分页
-# REST_FRAMEWORK = {
-#     # 分页
-#     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-#     # 每页展示数量
-#     'PAGE_SIZE': 10
-# }
+REST_FRAMEWORK = {
+    # # 分页
+    # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    # # 每页展示数量
+    # 'PAGE_SIZE': 10
+
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication'
+    )
+}
 
 # 解决跨域
 CORS_ORIGIN_ALLOW_ALL = True

@@ -16,8 +16,10 @@ Including another URLconf
 # from django.contrib import admin
 from django.urls import path, include, re_path
 from django.views.static import serve
+from rest_framework.authtoken import views
 from rest_framework.documentation import include_docs_urls
 from rest_framework.routers import DefaultRouter
+from rest_framework_jwt.views import obtain_jwt_token
 
 import xadmin
 from freshshop.settings import MEDIA_ROOT
@@ -36,6 +38,11 @@ urlpatterns = [
     # path('goods/', GoodsListView.as_view(), name='goods-list'),
     path('docs', include_docs_urls(title='钢仔')),
     path('api-auth', include('rest_framework.urls')),
+    # 首页展示drf的相关api
+    re_path('^', include(router.urls)),
+    # drf-token
+    path('api-token-auth/', views.obtain_auth_token),
 
-    re_path('^', include(router.urls))
+    # drf-jwt
+    path('login/', obtain_jwt_token)
 ]
