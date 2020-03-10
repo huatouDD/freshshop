@@ -24,12 +24,14 @@ from rest_framework_jwt.views import obtain_jwt_token
 import xadmin
 from freshshop.settings import MEDIA_ROOT
 from goods.views import GoodsListViewSet, CategoryViewSet
+from apps.users.views import SmsCodeViewSet
 
 router = DefaultRouter()
 
 # 配置goods的url
 router.register(r'goods', GoodsListViewSet)
 router.register(r'categorys', CategoryViewSet, basename='categorys')
+router.register(r'verifyCode', SmsCodeViewSet, basename='verify_code')
 
 urlpatterns = [
     path('xadmin/', xadmin.site.urls),

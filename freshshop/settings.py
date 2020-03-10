@@ -172,3 +172,6 @@ CORS_ORIGIN_ALLOW_ALL = True
 AUTHENTICATION_BACKENDS = (
     'users.views.CustomBackend',
 )
+
+# 云片key
+APIKEY = "5e8xxxxxb342718c0fdb1b5394ce8c832a"

@@ -2,7 +2,6 @@ import json
 
 import requests
 
-
 class YunPian(object):
     """
     云片验证码
