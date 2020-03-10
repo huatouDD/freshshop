@@ -157,6 +157,7 @@ REST_FRAMEWORK = {
     # # 每页展示数量
     # 'PAGE_SIZE': 10
 
+    # 设置drf的jwt
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.SessionAuthentication',
@@ -166,3 +167,8 @@ REST_FRAMEWORK = {
 
 # 解决跨域
 CORS_ORIGIN_ALLOW_ALL = True
+
+
+AUTHENTICATION_BACKENDS = (
+    'users.views.CustomBackend',
+)
